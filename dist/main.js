@@ -30,7 +30,7 @@ class Player {
     src;
     constructor() {
         this.width = 32 * 3;
-        this.height = 60 * 3;
+        this.height = 70 * 3;
         this.x = 100;
         this.y = canvas.height - this.height - 100;
         this.vy = 0;
