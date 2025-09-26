@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../styles/main.css" />
+  </head>
+  <body>
+    <div class="score-container">
+      <img src="../assets/image/score-container.png" alt="" id="score-icon" />
+      <span id="score">0</span>
+    </div>
+    <div id="game-over">
+      <img src="../assets/image/game-over.png" alt="Game Over" />
+      <button id="restart-button">
+        <!-- Font Awesome icon -->
+        <i class="fa-solid fa-rotate-right"></i>
+      </button>
+    </div>
+    <!--
+      Floor image will be moved left side to create a moving effect
+      and it will be looped
+    -->
+    <div id="floor"></div>
+    <canvas id="canvas"></canvas>
+    <script type="module" src="../dist/main.js"></script>
+  </body>
+</html>
