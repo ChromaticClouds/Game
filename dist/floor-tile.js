@@ -1,11 +1,13 @@
 export class FloorTile {
+    ctx;
     x;
     y;
     width;
     height;
     image;
     speed;
-    constructor(x, y, width, height, speed, src) {
+    constructor(ctx, x, y, width, height, speed, src) {
+        this.ctx = ctx;
         this.x = x;
         this.y = y;
         this.width = width;
@@ -14,9 +16,9 @@ export class FloorTile {
         this.image = new Image();
         this.image.src = src;
     }
-    update(ctx) {
+    update() {
         this.x -= this.speed;
-        ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+        this.ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
     }
 }
 //# sourceMappingURL=floor-tile.js.map

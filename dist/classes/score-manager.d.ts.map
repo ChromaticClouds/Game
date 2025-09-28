@@ -1,0 +1,1 @@
+{"version":3,"file":"score-manager.d.ts","sourceRoot":"","sources":["../../src/classes/score-manager.ts"],"names":[],"mappings":"AAAA,qBAAa,YAAY;IACvB,OAAO,CAAC,KAAK,CAAa;IAC1B,OAAO,CAAC,QAAQ,CAAa;IAE7B,KAAK,CAAC,SAAS,EAAE,MAAM;IAKvB,MAAM,CAAC,SAAS,EAAE,MAAM;IAMxB,QAAQ,IAAI,MAAM;IAIlB,KAAK;CAIN"}

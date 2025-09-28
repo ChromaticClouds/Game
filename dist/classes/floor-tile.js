@@ -1,21 +1,26 @@
 export class FloorTile {
+    ctx;
     x;
     y;
     width;
     height;
     image;
-    speed;
-    constructor(x, y, width, height, speed, src) {
+    floorSpeed;
+    constructor(ctx, x, y, width, height, floorSpeed, src) {
+        this.ctx = ctx;
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
-        this.speed = speed;
+        this.floorSpeed = floorSpeed;
         this.image = new Image();
         this.image.src = src;
     }
-    update(ctx) {
-        this.x -= this.speed;
+    update() {
+        this.x -= this.floorSpeed;
+        this.ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
+    }
+    draw(ctx) {
         ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
     }
 }

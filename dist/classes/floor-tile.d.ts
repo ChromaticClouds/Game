@@ -1,11 +1,13 @@
 export declare class FloorTile {
+    ctx: CanvasRenderingContext2D;
     x: number;
     y: number;
     width: number;
     height: number;
     image: HTMLImageElement;
-    speed: number;
-    constructor(x: number, y: number, width: number, height: number, speed: number, src: string);
-    update(ctx: CanvasRenderingContext2D): void;
+    floorSpeed: number;
+    constructor(ctx: CanvasRenderingContext2D, x: number, y: number, width: number, height: number, floorSpeed: number, src: string);
+    update(): void;
+    draw(ctx: CanvasRenderingContext2D): void;
 }
 //# sourceMappingURL=floor-tile.d.ts.map

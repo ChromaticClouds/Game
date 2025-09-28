@@ -49,6 +49,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: var(--text-color);
+  font-family: 'Galmuri-Bold', sans-serif;
 }
 
 button {
@@ -81,9 +83,7 @@ button {
   left: 30px;
   font-size: 2rem;
   font-weight: bold;
-  font-family: 'Galmuri-Bold', sans-serif;
   font-style: italic;
-  color: var(--text-color);
   z-index: 1;
 }
 
@@ -111,6 +111,11 @@ button {
   gap: 40px;
 }
 
+#game-over #total-score {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
 #game-over button {
   width: 60px;
   height: 60px;
@@ -136,5 +141,57 @@ button {
 #floor img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.main-screen {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  gap: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-screen .logo-container {
+  width: 720px;
+  height: fit-content;
+  overflow: hidden;
+}
+
+.main-screen .logo-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.main-screen #play-button {
+  position: relative;
+  cursor: pointer;
+}
+
+#play-button p {
+  font-size: 3rem;
+}
+
+#play-button:hover p {
+  transform: rotate(-12deg);
+}
+
+#play-button .pointer {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: 100%;
+  width: 60px;
+  height: fit-content;
+}
+
+#play-button .pointer img {
+  width: 100%;
   object-fit: cover;
 }

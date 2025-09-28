@@ -1,0 +1,43 @@
+import { Obstacle } from "./obstable.js";
+import { checkCollision } from "./utils/index.js";
+export class ObstacleManager {
+    ctx;
+    canvas;
+    obstacles = [];
+    gameOver = false;
+    score = 0;
+    minSpawn;
+    maxSpawn;
+    constructor(ctx, canvas, minSpawn = 200, maxSpawn = 2000) {
+        this.ctx = ctx;
+        this.canvas = canvas;
+        this.minSpawn = minSpawn;
+        this.maxSpawn = maxSpawn;
+    }
+    startSpawning() {
+        setTimeout(() => this.spawnObstacle(), 3000);
+    }
+    spawnObstacle() {
+        if (!this.gameOver) {
+            this.obstacles.push(new Obstacle(this.ctx, this.canvas));
+        }
+        const nextSpawn = Math.random() * (this.maxSpawn - this.minSpawn) + this.minSpawn;
+        setTimeout(() => this.spawnObstacle(), nextSpawn);
+    }
+    update(player) {
+        this.obstacles = this.obstacles.filter((obstacle) => {
+            obstacle.update();
+            if (checkCollision(player, obstacle)) {
+                this.gameOver = true;
+                return false; // 충돌 → 제거
+            }
+            if (obstacle.x + obstacle.config.width < 0)
+                return false; // 화면 밖 → 제거
+            return true; // 유지
+        });
+    }
+    stop() {
+        this.gameOver = true;
+    }
+}
+//# sourceMappingURL=obstacle-manager.js.map

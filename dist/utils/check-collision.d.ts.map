@@ -1,0 +1,1 @@
+{"version":3,"file":"check-collision.d.ts","sourceRoot":"","sources":["../../src/utils/check-collision.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,eAAe,CAAC;AACvC,OAAO,EAAE,QAAQ,EAAE,MAAM,gBAAgB,CAAC;AAE1C,wBAAgB,cAAc,CAAC,MAAM,EAAE,MAAM,EAAE,QAAQ,EAAE,QAAQ,GAAG,OAAO,CAS1E"}

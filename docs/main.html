@@ -17,6 +17,7 @@
     </div>
     <div id="game-over">
       <img src="../assets/image/game-over.png" alt="Game Over" />
+      <p id="total-score"></p>
       <button id="restart-button">
         <!-- Font Awesome icon -->
         <i class="fa-solid fa-rotate-right"></i>
@@ -27,6 +28,17 @@
       and it will be looped
     -->
     <div id="floor"></div>
+    <section class="main-screen">
+      <div class="logo-container">
+        <img src="../assets/image/logo/logo.png" />
+      </div>
+      <div id="play-button">
+        <p>Play</p>
+        <div class="pointer">
+          <img src="../assets/image/pointer.png" />
+        </div>
+      </div>
+    </section>
     <canvas id="canvas"></canvas>
     <script type="module" src="../dist/main.js"></script>
   </body>
