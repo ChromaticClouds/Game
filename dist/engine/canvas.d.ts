@@ -1,3 +1,4 @@
-export declare const canvas: HTMLCanvasElement;
-export declare const ctx: CanvasRenderingContext2D;
+declare const canvas: HTMLCanvasElement;
+declare const ctx: CanvasRenderingContext2D;
+export { canvas, ctx };
 //# sourceMappingURL=canvas.d.ts.map

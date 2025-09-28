@@ -75,7 +75,7 @@ export const playerData = (canvas: HTMLCanvasElement): PlayerData => {
           img.src = src;
           return img;
         }),
-        frameInterval: 150,
+        frameInterval: 200,
       },
     },
   };

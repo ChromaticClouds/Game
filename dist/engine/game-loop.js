@@ -11,7 +11,8 @@ export const startGameLoop = (deltaTime) => {
     scoreManager.update(deltaTime);
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     floorManager.update();
-    player.setState('run');
+    if (!player.isJumping && !player.isSliding)
+        player.setState('run');
     player.update(16);
     obstacleManager.update(player);
     gameState.gameOver = obstacleManager.gameOver;

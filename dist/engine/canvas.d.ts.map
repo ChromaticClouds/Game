@@ -1,1 +1,1 @@
-{"version":3,"file":"canvas.d.ts","sourceRoot":"","sources":["../../src/engine/canvas.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,MAAM,EAAwC,iBAAiB,CAAC;AAC7E,eAAO,MAAM,GAAG,EAA8B,wBAAwB,CAAC"}
+{"version":3,"file":"canvas.d.ts","sourceRoot":"","sources":["../../src/engine/canvas.ts"],"names":[],"mappings":"AAAA,QAAA,MAAM,MAAM,EAAwC,iBAAiB,CAAC;AACtE,QAAA,MAAM,GAAG,EAA8B,wBAAwB,CAAC;AAUhE,OAAO,EAAE,MAAM,EAAE,GAAG,EAAE,CAAC"}

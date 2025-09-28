@@ -73,10 +73,10 @@ export class Player {
             this.height = this.data.jumpHeight;
             this.vy -= this.data.gravity;
             this.y -= this.vy;
-            const fallThreshold = this.canvas.height - this.data.normalHeight - 200; // 200px 위에서 슬라이드 가능
+            // Enable to slide on 200px height
+            const fallThreshold = this.canvas.height - this.data.normalHeight - 200;
             if (this.slideQueued && this.y >= fallThreshold) {
                 this.isSliding = true;
-                this.slideDown();
                 this.isJumping = false;
                 this.vy = 0;
                 slideSound.currentTime = 0;
@@ -99,16 +99,18 @@ export class Player {
         else if (!this.isJumping) {
             this.height = this.data.normalHeight;
             this.y = this.canvas.height - this.height - 100;
-            if (this.state !== 'idle')
+            if (this.state !== "idle")
                 this.setState("run");
         }
         const anim = this.data.animations[this.state];
-        this.frameTimer += deltaTime;
-        if (this.frameTimer >= anim.frameInterval) {
-            this.frameTimer = 0;
-            this.frameIndex = (this.frameIndex + 1) % anim.frames.length;
+        if (anim.frames.length > 0) {
+            this.frameTimer += deltaTime;
+            if (this.frameTimer >= anim.frameInterval) {
+                this.frameTimer = 0;
+                this.frameIndex = (this.frameIndex + 1) % anim.frames.length;
+            }
+            this.ctx.drawImage(anim.frames[this.frameIndex], this.x, this.y, this.width, this.height);
         }
-        this.ctx.drawImage(anim.frames[this.frameIndex], this.x, this.y, this.width, this.height);
     }
     getHitbox() {
         const shrinkX = this.width * 0.6;
